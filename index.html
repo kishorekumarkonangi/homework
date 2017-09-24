@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" /> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script src="controller.js"></script>
+</head>
+<body>
+<div ng-controller="mycontroller">
+	<button ng-click="createcsv()" class="btn btn-primary">ExportFile</button>
+	<div class="container">
+<!-- 		<table class="table table-striped table-bordered">
+			<thead>
+			<tr>
+				<th>id</th>
+				<th>NAME</th>
+			</tr>
+			</thead>
+			<tbody> -->
+				<div ng-repeat="item in jsondata">
+						 {{item.orderId}}
+						 {{item.name}}
+				</div>
+<!-- 			</tbody>
+		</table> -->
+	</div>
+</div>
+</body>
+
+</html>
